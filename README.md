@@ -1,6 +1,6 @@
 # E-Commerce Order Management System
 
-Senior Full Stack Technical Assessment: .NET Web API + Angular with Clean Architecture, CQRS, JWT, and global notifications.
+.NET Web API + Angular with Clean Architecture, CQRS, JWT.
 
 ---
 
@@ -36,7 +36,6 @@ Order creation: validate stock, apply discount (e.g. SAVE10/SAVE20), deduct stoc
 ### Prerequisites
 
 - .NET 8 SDK  
-- Node.js 18+  
 - SQL Server or LocalDB (for `(localdb)\mssqllocaldb`)
 
 ### 1. Backend
@@ -72,41 +71,9 @@ npm start
 2. Login as **customer@example.com** / **Customer@123** (or register).
 3. Open a product → Add to cart → Cart → Checkout (optional: SAVE10) → Place order → Order summary + success notification.
 4. Login as **admin@example.com** / **Admin@123** → “Add Product” → create/edit products.
-5. Trigger errors (e.g. wrong login, insufficient stock) to see **global error notifications**.
 
 ---
 
-## Delivering for Interview (Zip / Repo)
-
-- **Option A**: Zip the folder `ECommerceOrderManagement` (excluding `node_modules`, `bin`, `obj`, `.angular`) and share.
-- **Option B**: Push to a Git repo; share link. Add a short note in README with:
-  - How to run (as above).
-  - That the project uses Clean Architecture, CQRS, JWT, global notifications, and transactional order creation.
-
----
-
-## Checklist vs Task PDF
-
-| Requirement | Done |
-|------------|------|
-| .NET 7/8, EF Core, SQL Server | ✅ .NET 8, EF Core 8, SQL Server |
-| Clean Architecture | ✅ Domain, Application, Infrastructure, API |
-| CQRS | ✅ MediatR commands/queries |
-| Unit of Work (if applicable) | ✅ Transaction in CreateOrder via `BeginTransactionAsync` |
-| JWT Authentication | ✅ Login/Register, Bearer in API and Angular |
-| Swagger | ✅ |
-| Order: validate stock, discount, deduct stock, total, transaction | ✅ |
-| Angular latest, TypeScript, modular | ✅ Angular 21, TS, feature modules |
-| Reactive Forms, HTTP Interceptor, Route Guards | ✅ |
-| Product list: pagination, search, filter, sort | ✅ |
-| Product create/edit (Admin only) | ✅ |
-| Product detail, cart, checkout, order summary | ✅ |
-| Global notifications (success/error/warning/info, auto-dismiss, manual close, stacked) | ✅ |
-| Notifications from API responses & HTTP interceptor | ✅ |
-
-Optional (advanced): SignalR real-time and notification center with unread counter can be added on top of this base.
-
----
 
 ## Troubleshooting
 
