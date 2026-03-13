@@ -4,7 +4,7 @@
 
 ---
 
-## Architecture (Senior-Level Choices)
+## Architecture
 
 ### Backend (.NET 8) – Clean Architecture + CQRS
 
