@@ -31,7 +31,7 @@ Order creation: validate stock, apply discount (e.g. SAVE10/SAVE20), deduct stoc
 
 ---
 
-## How to Run (Quick – 2 days flow)
+## How to Run 
 
 ### Prerequisites
 
