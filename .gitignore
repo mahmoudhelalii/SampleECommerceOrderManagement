@@ -1,0 +1,33 @@
+# === Angular / Node (client) ===
+client/node_modules/
+client/dist/
+client/.angular/
+client/tmp/
+client/out-tsc/
+*.log
+.npm-debug.log*
+
+# === .NET (API) ===
+**/bin/
+**/obj/
+**/.vs/
+**/*.user
+**/*.suo
+**/appsettings.Development.json
+**/appsettings.*.local.json
+*.db
+*.db-shm
+*.db-wal
+
+# === IDEs ===
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+# === OS ===
+.DS_Store
+Thumbs.db

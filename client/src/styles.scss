@@ -1,0 +1,94 @@
+@use '@angular/material' as mat;
+
+html {
+  @include mat.core();
+}
+
+:root {
+  @include mat.theme((
+    color: (
+      primary: mat.$cyan-palette,
+      tertiary: mat.$azure-palette,
+    ),
+    typography: (
+      brand-family: 'Roboto, system-ui, sans-serif',
+      plain-family: 'Roboto, system-ui, sans-serif',
+    ),
+    density: 0,
+  ));
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Roboto, system-ui, sans-serif;
+  background: #f8f9fa;
+  color: #2d3131;
+}
+
+/* OrderCast-style: primary links and headings */
+a[mat-button]:not(.active),
+a[mat-flat-button],
+.mat-mdc-button:not(.mat-primary) .mat-icon {
+  color: inherit;
+}
+.mat-mdc-raised-button.mat-primary,
+.mat-mdc-unelevated-button.mat-primary {
+  --mdc-filled-button-container-color: #006a6a;
+  --mdc-filled-button-label-text-color: #fff;
+}
+
+/* Success/Approved status */
+.status-approved,
+.mat-mdc-chip.status-approved {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Notification/warning badges */
+.badge-warn,
+.mat-mdc-chip.badge-warn {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+/* Cards and form surfaces: white */
+.mat-mdc-card {
+  background-color: #fff;
+}
+
+/* RTL: layout and spacing use logical properties so they flip automatically when dir="rtl" */
+[dir='rtl'] {
+  .mat-mdc-form-field-icon-prefix,
+  .mat-mdc-form-field-icon-suffix {
+    margin-inline-start: 0;
+    margin-inline-end: 12px;
+  }
+  .mat-mdc-button .mat-icon {
+    margin-inline-end: 0;
+    margin-inline-start: 8px;
+  }
+  .mat-mdc-button .mat-icon:first-child:last-child {
+    margin-inline-start: 0;
+  }
+  /* Ensure content and cards align to the start (right in RTL) */
+  .page-header,
+  .product-card,
+  .detail-card,
+  .form-card,
+  .cart-card,
+  .order-card,
+  .checkout-card,
+  .empty-card {
+    text-align: start;
+  }
+  .filters {
+    text-align: start;
+  }
+  .pagination {
+    flex-direction: row;
+  }
+}
